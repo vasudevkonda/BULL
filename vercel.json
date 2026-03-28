@@ -2,20 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "50mb"
-      }
+      "src": "api/index.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "api/index.py"
     }
-  ],
-  "env": {
-    "GROQ_API_KEY": "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"
-  }
+  ]
 }
